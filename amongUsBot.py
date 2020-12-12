@@ -41,11 +41,9 @@ async def on_ready():
     team_two = []
     
     # make teams
-    i = 0
-    while i  < (len(members) - 1):
+    for i in range(0, (len(members) - 1), 2):
         team_one.append(members[i])
         team_two.append(members[i + 1])
-        i += 2
         
     # get text channel
     for text_channel in guild.text_channels:
